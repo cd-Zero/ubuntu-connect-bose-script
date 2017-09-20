@@ -1,0 +1,1 @@
+# ubuntu-connect-bose-script
