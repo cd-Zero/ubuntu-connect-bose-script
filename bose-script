@@ -1,0 +1,27 @@
+
+echo 'module refreshing... 1'
+pactl unload-module module-bluetooth-discover;pactl load-module module-bluetooth-discover;
+
+
+
+
+echo 'Bose Headphones being CONNECTED...'
+
+sleep 1s && echo -e 'connect 04:52:C7:0B:8C:80 '| bluetoothctl;
+
+sleep 5s && echo 'Bose Headphones being DISCONNECTED... 2'
+
+echo -e 'disconnect 04:52:C7:0B:8C:80'| bluetoothctl;
+
+
+
+sleep 5s && echo 'reconnect bose... 3'
+
+echo -e 'connect 04:52:C7:0B:8C:80 \n trust 04:52:C7:0B:8C:80 \n  info 04:52:C7:0B:8C:80 '| bluetoothctl;
+
+sleep 10s && pacmd set-card-profile 2 a2dp_sink
+
+
+
+
+
