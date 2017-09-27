@@ -8,7 +8,7 @@
  clone github repo
  
  mkdir ~/bin
- 
+ script_name can be any script name
  touch ~/bin/script_name
  
  chmod +x script_name
